@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller TG | Telegram Accounts</title>
+    <style>
+        /* весь предыдущий CSS + новый класс для кнопки-ссылки */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .bio-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .seller-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .description {
+            color: #b8b8b8;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            color: #e0e0e0;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 15px;
+        }
+
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+
+        .btn {
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #0088cc;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0099e6;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ff6b35;
+            border: 2px solid #ff6b35;
+        }
+
+        .btn-secondary:hover {
+            background: #ff6b35;
+            color: white;
+        }
+
+        /* новая кнопка Инфо */
+        .btn-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-info:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .bio-card {
+                padding: 25px;
+                margin: 10px;
+            }
+            
+            .seller-name {
+                font-size: 24px;
+            }
+            
+            .features li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bio-card">
+        <h1 class="seller-name">@MostHolyZ</h1>
+        <p class="description">
+            Телеграм-аккаунты премиум качества<br>
+            <em>Гарантия. Опт. Выдача по коду</em>
+        </p>
+        
+        <ul class="features">
+            <li>🌍 Номера ЛЮБОЙ страны</li>
+            <li>📱 Полностью готовы к работе</li>
+            <li>🔐 Без 2FA + убираем почту для рега</li>
+            <li>🪙 Возможность получить аккаунт БЕСПЛАТНО</li>
+            <li>⭐ Есть .session/.json
+            <li>⚡️ Выдача по номеру и коду</li>
+            <li>💯 Живые отзывы и поддержка</li>
+        </ul>
+        
+        <div class="buttons">
+            <a href="https://t.me/MostHolyZ" class="btn btn-primary">
+                💬 Написать продавцу
+            </a>
+            <a href="https://t.me/MostHolyReputation" class="btn btn-secondary">
+                📝 Отзывы клиентов
+            </a>
+            <!-- новая кнопка Инфо -->
+            <a href="info.html" class="btn btn-info">
+                ℹ️ Инфо о покупке
+            </a>
+        </div>
+        
+        <div class="footer">
+            📞 Для сотрудничества: <a href="https://t.me/MostHolyZ" style="color: #ff6b35;">@MostHolyZ</a><br>
+            🎯 Постоянным клиентам - скидка
+        </div>
+    </div>
+</body>
+</html>

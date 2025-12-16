@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила о покупке | Telegram Accounts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title.purple { color: #a855f7; }
+        .section-title.yellow { color: #fbbf24; }
+        .section-title.red { color: #ef4444; }
+        .section-title.green { color: #22c55e; }
+
+        .list {
+            list-style: none;
+        }
+
+        .list li {
+            color: #e0e0e0;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .list.purple li::before { background: #a855f7; }
+        .list.yellow li::before { background: #fbbf24; }
+        .list.red li::before { background: #ef4444; }
+
+        .emoji { font-size: 18px; margin-right: 5px; }
+
+        /* ОДИНАКОВЫЕ КНОПКИ */
+        .btn-row {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .action-btn {
+            display: block;
+            padding: 14px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            transition: all .3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+        }
+
+        .btn-seller { background: #0088cc; }
+        .btn-home { background: #22c55e; }
+
+        @media (max-width: 480px) {
+            .info-card { padding: 25px; }
+            .title { font-size: 22px; }
+            .section-title { font-size: 18px; }
+            .list li { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="info-card">
+        <h1 class="title">Правила о покупке аккаунта.</h1>
+
+        <div class="section">
+            <h2 class="section-title purple"><span>💳</span>После оплаты вы получаете:</h2>
+            <ul class="list purple">
+                <li><span class="emoji">🟪</span>Телефонный номер <span class="emoji">📞</span></li>
+                <li><span class="emoji">🟨</span>Запрашиваемый вами код для входа <span class="emoji">🔐</span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title yellow"><span>🔮</span>Инструкция:</h2>
+            <ul class="list yellow">
+                <li><span class="emoji">🟣</span>1 - Вы покупаете. Я выдаю номер телефона</li>
+                <li><span class="emoji">🟡</span>2 - Вы вписываете этот номер и я/автовыдача выдает код</li>
+                <li><span class="emoji">🟣</span>3 - Вы зашли на аккаунт и можете им пользоваться</li>
+                <li><span class="emoji">🟡</span>4 - Оставьте свой отзыв</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title red"><span>⚠️</span>Важно:</h2>
+            <ul class="list red">
+                <li><span class="emoji">📅</span>Гарантия действует только до того момента пока я не выдам код!</li>
+                <li><span class="emoji">⚠️</span>Если аккаунт активен, но позже был заблокирован или слетел, возврат средств не производится.</li>
+                <li><span class="emoji">🔄</span>Вход осуществляется по предоставленному номеру, затем вы запрашиваете код.</li>
+                <li><span class="emoji">📩</span>Код выдается 1 раз</li>
+                <li><span class="emoji">💻</span>2 устройства - вы и бот(не всегда, но если есть вы обязаны выкинуть все устройства через 24 часа) Еще меняете почту для входа.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title green"><span>✅</span>После успешной авторизации</h2>
+            <p style="color:#e0e0e0; font-size:15px; line-height:1.5;">
+                Аккаунт полностью переходит в ваше владение, и дальнейшие действия осуществляются только вами.
+            </p>
+        </div>
+
+        <!-- Две одинаковые кнопки -->
+        <div class="btn-row">
+            <a href="https://t.me/MostHolyZ" class="action-btn btn-seller">💬 Написать продавцу</a>
+            <a href="index.html" class="action-btn btn-home">🏠 На главную</a>
+        </div>
+    </div>
+</body>
+</html>
