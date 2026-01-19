@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Легенда о Пленении Ибры</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Kalam&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #1a120b url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" opacity="0.1"><filter id="grain"><feTurbulence baseFrequency="0.8" numOctaves="3"/></filter><rect width="200" height="200" filter="url(%23grain)" fill="%23f4e8d0"/></svg>');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Kalam', cursive;
+        }
+        
+        .scroll-wrapper {
+            position: relative;
+            width: 700px;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.7));
+        }
+        
+        .scroll {
+            background: linear-gradient(90deg, #e9d9b6 0%, #f4e8d0 15%, #f4e8d0 85%, #e9d9b6 100%);
+            padding: 80px 60px;
+            position: relative;
+            border-radius: 5px;
+            transform: translateY(0);
+            animation: unroll 2s ease-out;
+            box-shadow: inset 0 0 40px rgba(139,69,19,0.2);
+        }
+        
+        @keyframes unroll {
+            from { 
+                transform: translateY(-100px) scaleY(0.3); 
+                opacity: 0.5; 
+                filter: blur(5px); 
+            }
+            to { 
+                transform: translateY(0) scaleY(1); 
+                opacity: 1; 
+                filter: blur(0); 
+            }
+        }
+        
+        /* Свернутые края свитка */
+        .scroll::before, .scroll::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            left: 0;
+            background: linear-gradient(to bottom, #d4a574, #c19660);
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+        
+        .scroll::before {
+            top: -20px;
+            border-bottom: 2px solid #8b4513;
+        }
+        
+        .scroll::after {
+            bottom: -20px;
+            border-top: 2px solid #8b4513;
+        }
+        
+        /* Ручки свитка */
+        .scroll-handle-left, .scroll-handle-right {
+            position: absolute;
+            width: 60px;
+            height: 120%;
+            top: -10%;
+            background: linear-gradient(90deg, #8b4513 0%, #a0522d 50%, #8b4513 100%);
+            border-radius: 30px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+            z-index: -1;
+        }
+        
+        .scroll-handle-left {
+            left: -40px;
+        }
+        
+        .scroll-handle-right {
+            right: -40px;
+        }
+        
+        /* Декоративные элементы */
+        .scroll-decoration {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            right: 20px;
+            height: 30px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10"><path d="M0,5 Q25,0 50,5 T100,5" stroke="%238b4513" stroke-width="1.5" fill="none"/></svg>') repeat-x;
+            opacity: 0.3;
+        }
+        
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8em;
+            color: #3a1f0f;
+            text-align: center;
+            margin: 0 0 40px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            letter-spacing: 3px;
+        }
+        
+        .title-underline {
+            width: 80%;
+            height: 15px;
+            margin: -30px auto 30px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 15"><path d="M0,7 Q50,0 100,7 T200,7" stroke="%238b4513" stroke-width="2" fill="none"/><path d="M10,8 Q60,15 110,8 T190,8" stroke="%23a0522d" stroke-width="2" fill="none"/></svg>') no-repeat center;
+            background-size: 100% 100%;
+        }
+        
+        p {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #2a1810;
+            text-align: justify;
+            margin: 25px 0;
+            text-indent: 30px;
+            position: relative;
+        }
+        
+        .warning {
+            background: rgba(139,69,19,0.08);
+            border: 1px solid rgba(139,69,19,0.3);
+            border-left: 4px solid #8b4513;
+            padding: 20px 25px;
+            margin: 30px 0;
+            font-style: italic;
+            font-weight: bold;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .quote {
+            text-align: center;
+            font-size: 1.4em;
+            color: #5a2a1a;
+            margin: 35px 0;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+        
+        .author {
+            text-align: right;
+            font-size: 0.9em;
+            color: #6a3a2a;
+            margin-top: 50px;
+            font-style: italic;
+            border-top: 1px dashed rgba(139,69,19,0.3);
+            padding-top: 15px;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        
+        .fade-in:nth-child(3) { animation-delay: 0.5s; }
+        .fade-in:nth-child(4) { animation-delay: 1s; }
+        .fade-in:nth-child(5) { animation-delay: 1.5s; }
+        .fade-in:nth-child(6) { animation-delay: 2s; }
+        .fade-in:nth-child(7) { animation-delay: 2.5s; }
+        .fade-in:nth-child(8) { animation-delay: 3s; }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-wrapper">
+        <div class="scroll-handle-left"></div>
+        <div class="scroll-handle-right"></div>
+        <div class="scroll">
+            <div class="scroll-decoration"></div>
+            
+            <h1>Легенда о Пленении Ибры</h1>
+            <div class="title-underline"></div>
+            
+            <p class="fade-in">Ибра создал мир четырёх стихий, но честолюбие свело его с ума — он захотел стать самой душой сервера. Создал ритуал, но ошибся в одной цифре.</p>
+            
+            <p class="fade-in">В тот день четверо игроков занимались своим делом. <strong>Люцифер</strong> поставил блок под водой. <strong>Каза</strong> взмахнул киркой в глубинах. <strong>Пухля</strong> зажёг факел на горе. <strong>Мелок</strong> взлетела выше облаков.</p>
+            
+            <p class="fade-in">Четыре сердца, четыре действия — и всё совпало в такт биения мира.</p>
+            
+            <p class="fade-in">Ритуал сработал, но не так, как хотел Ибра. Его сознание растворилось в коде, а воля заточена в той системе, что задумал контролировать.</p>
+            
+            <div class="warning fade-in">
+                Теперь Ибра — вечный узник. Видит каждый твой шаг, но не может покинуть пределы, что выросли из его ошибки. Играй, но помни: каждый блок подпитывает его пленение.
+            </div>
+            
+            <p class="fade-in">А в полночь у камней четырёх стихий слышится его шёпот:</p>
+            
+            <p class="quote fade-in">
+                "Не влюбляйтесь в мир настолько, чтобы стать его частью"
+            </p>
+            
+            <p class="author fade-in">Автор: неизвестно...</p>
+        </div>
+    </div>
+</body>
+</html>
