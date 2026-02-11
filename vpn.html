@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MostHoly VPN - Свободный интернет</title>
+    <style>
+        :root {
+            --primary: #8e44ad;
+            --accent: #9b59b6;
+            --bg: #0f0f0f;
+            --card: #1a1a1a;
+            --text: #ffffff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+            text-align: center;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .status-badge {
+            background: rgba(46, 204, 113, 0.1);
+            color: #2ecc71;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #2ecc71;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .update-info {
+            font-size: 15px;
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+        .copy-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px dashed #444;
+            border-radius: 20px;
+        }
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 18px 32px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            display: inline-block;
+        }
+        .btn:hover { background: var(--accent); transform: scale(1.02); }
+        .instruction-box {
+            text-align: left;
+            background: #252525;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        .instruction-box h3 { margin: 0 0 15px 0; color: var(--accent); }
+        .tg-link { color: #3498db; text-decoration: none; font-weight: bold; }
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            opacity: 0.5;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+        #sub-data { display: none; visibility: hidden; }
+        .success-msg { color: #2ecc71; font-weight: bold; margin-top: 15px; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">MostHoly VPN</div>
+    <div class="status-badge">СИСТЕМА АКТИВНА</div>
+    
+    <div class="update-info">
+        <b>Последнее обновление:</b><br>12.02.2026 в 01:17
+    </div>
+
+    <div class="copy-section">
+        <p>Скопируйте ключ-ссылку для приложения:</p>
+        <button class="btn" onclick="copyLink()">СКОПИРОВАТЬ КЛЮЧ</button>
+        <div id="copy-status" class="success-msg">Ключ скопирован! ✅</div>
+    </div>
+
+    <div class="instruction-box">
+        <h3>Инструкция</h3>
+        <ol>
+            <li>Нажмите "Скопировать ключ".</li>
+            <li>В приложении (<b>Happ, Karing, v2rayNG</b>) зайдите в "Подписки".</li>
+            <li>Добавьте URL и <b>обновите</b> список серверов.</li>
+        </ol>
+    </div>
+
+    <p>Канал: <a href="https://t.me/MostHolyVPN" class="tg-link">@MostHolyVPN</a></p>
+
+    <div class="footer">
+        Конфигов: 33 | Обновлено: 12.02.2026 в 01:17
+    </div>
+</div>
+
+<script>
+function copyLink() {
+    const text = 'https://imostholy.github.io/vpn';
+    navigator.clipboard.writeText(text).then(() => {
+        const s = document.getElementById('copy-status');
+        s.style.display = 'block';
+        setTimeout(() => { s.style.display = 'none'; }, 2500);
+    });
+}
+</script>
+
+<div id="sub-data">
+Profile-Title: MostHoly VPN
+Profile-Update-Interval: 24
+vless://e08f1ad7-0c60-446d-baec-08b3b69bb3d0@195.209.81.144:80?path=%2FgetWorkerUpdates&security=&encryption=none&host=nl-90w-c.southnetworks.cloud&type=ws&sni=nl-90w-c.southnetworks.cloud#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA01%7C%20%40WhiteListVless
+vless://e08f1ad7-0c60-446d-baec-08b3b69bb3d0@195.209.67.124:80?path=%2FgetWorkerUpdates&security=&encryption=none&host=nl-90w-c.southnetworks.cloud&type=ws#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA02%7C%20%40WhiteListVless
+vless://3c5c4ccc-b502-42cb-8c42-cfa714db4767@212.233.73.212:8443?security=reality&encryption=none&pbk=7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=8ba12e75110b7a9c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA03%7C%20%40WhiteListVless
+vless://e8accc46-c511-42fb-919b-9283799a88a1@87.239.107.214:443?security=reality&encryption=none&pbk=Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=8f222b3475800821#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA04%7C%20%40WhiteListVless
+vless://0a9fe7e0-e02d-42ca-bebd-ecb4292f180c@79.137.175.59:8443?security=reality&encryption=none&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=205748bc0f24a747#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA05%7C%20%40WhiteListVless
+vless://0a9fe7e0-e02d-42ca-bebd-ecb4292f180c@79.137.175.59:8443?security=reality&encryption=none&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=205748bc0f24a747#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA06%7C%20%40WhiteListVless
+vless://e8accc46-c511-42fb-919b-9283799a88a1@87.239.107.214:8443?security=reality&encryption=none&pbk=Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=8f222b3475800821#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA07%7C%20%40WhiteListVless
+vless://e8accc46-c511-42fb-919b-9283799a88a1@79.137.175.56:443?security=reality&encryption=none&pbk=Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=8f222b3475800821#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA08%7C%20%40WhiteListVless
+vless://11e41a32-6672-48a0-b9cb-c8694242ecff@87.239.106.153:443?security=reality&encryption=none&pbk=zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=28047c78b3f5ee2c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA09%7C%20%40WhiteListVless
+vless://0a9fe7e0-e02d-42ca-bebd-ecb4292f180c@146.185.240.23:8443?security=reality&encryption=none&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=205748bc0f24a747#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA10%7C%20%40WhiteListVless
+vless://3c5c4ccc-b502-42cb-8c42-cfa714db4767@37.139.33.15:443?security=reality&encryption=none&pbk=7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=2715592069f36fe7#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA11%7C%20%40WhiteListVless
+vless://11e41a32-6672-48a0-b9cb-c8694242ecff@87.239.106.153:8443?security=reality&encryption=none&pbk=zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=28047c78b3f5ee2c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA12%7C%20%40WhiteListVless
+vless://11e41a32-6672-48a0-b9cb-c8694242ecff@79.137.175.44:443?security=reality&encryption=none&pbk=zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=48fccabc158a4c22#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA13%7C%20%40WhiteListVless
+vless://7cd318d9-4bf8-4a7a-8680-af84282953e6@146.185.240.23:443?security=reality&encryption=none&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=205748bc0f24a747#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA14%7C%20%40WhiteListVless
+vless://9cb2d5c5-c5e0-409b-ad3b-7c057b7971b1@37.139.42.234:4443?security=reality&encryption=none&pbk=-kDgSQgouE56cqDIDwgCco1LNQ-8q61WllL5egDI0yI&headerType=none&fp=chrome&type=tcp&sni=yandex.ru&sid=6670#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA15%7C%20%40WhiteListVless
+vless://0a9fe7e0-e02d-42ca-bebd-ecb4292f180c@79.137.175.59:443?security=reality&encryption=none&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=e57932a42872a362#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA16%7C%20%40WhiteListVless
+vless://3c5c4ccc-b502-42cb-8c42-cfa714db4767@212.233.73.212:443?security=reality&encryption=none&pbk=7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=8ba12e75110b7a9c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA17%7C%20%40WhiteListVless
+vless://50b95deb-6394-46c5-b88a-583e5b3ca7ee@fastcon-tg.harknmav.fun:443?security=reality&encryption=none&pbk=PGccrEdFmBaB1rQFJqM-a9jJ1pFsxhUP2sD9KTw5Oz4&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=eh.vk.com&sid=f69d7af2d5fc5e0c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA18%7C%20%40WhiteListVless
+vless://e8accc46-c511-42fb-919b-9283799a88a1@79.137.175.56:51102?security=reality&encryption=none&pbk=Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=8f222b3475800821#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA19%7C%20%40WhiteListVless
+vless://11e41a32-6672-48a0-b9cb-c8694242ecff@37.139.34.145:8443?security=reality&encryption=none&pbk=zr8_rtHm86s_G1gfRwNtunStGngYZSdYkA3PyBFXpDg&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=48fccabc158a4c22#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA20%7C%20%40WhiteListVless
+vless://0a9fe7e0-e02d-42ca-bebd-ecb4292f180c@87.239.110.251:443?security=reality&encryption=none&pbk=zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=e57932a42872a362#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA21%7C%20%40WhiteListVless
+vless://50b95deb-6394-46c5-b88a-583e5b3ca7ee@178.250.243.98:443?security=reality&encryption=none&pbk=PGccrEdFmBaB1rQFJqM-a9jJ1pFsxhUP2sD9KTw5Oz4&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=eh.vk.com&sid=f69d7af2d5fc5e0c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA22%7C%20%40WhiteListVless
+vless://50b95deb-6394-46c5-b88a-583e5b3ca7ee@178.250.243.97:443?security=reality&encryption=none&pbk=PGccrEdFmBaB1rQFJqM-a9jJ1pFsxhUP2sD9KTw5Oz4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=eh.vk.com&sid=f69d7af2d5fc5e0c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA23%7C%20%40WhiteListVless
+vless://50b95deb-6394-46c5-b88a-583e5b3ca7ee@178.250.243.97:443?security=reality&encryption=none&pbk=PGccrEdFmBaB1rQFJqM-a9jJ1pFsxhUP2sD9KTw5Oz4&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=eh.vk.com&sid=f69d7af2d5fc5e0c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA24%7C%20%40WhiteListVless
+vless://e8accc46-c511-42fb-919b-9283799a88a1@79.137.175.56:8443?security=reality&encryption=none&pbk=Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=8f222b3475800821#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA25%7C%20%40WhiteListVless
+vless://eb4234b2-8083-4038-af1d-ae752b4ad6d4@37.139.33.57:8443?security=reality&encryption=none&pbk=_CjW0Khlrr5z5oc9Oy6-w2ZEanz-zMBktVn5EOX9oTM&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.vk.ru&sid=6419bed7fd0a2cff#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA26%7C%20%40WhiteListVless
+vless://50b95deb-6394-46c5-b88a-583e5b3ca7ee@178.250.243.101:443?security=reality&encryption=none&pbk=PGccrEdFmBaB1rQFJqM-a9jJ1pFsxhUP2sD9KTw5Oz4&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=eh.vk.com&sid=f69d7af2d5fc5e0c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA27%7C%20%40WhiteListVless
+vless://50b95deb-6394-46c5-b88a-583e5b3ca7ee@178.250.243.102:443?security=reality&encryption=none&pbk=PGccrEdFmBaB1rQFJqM-a9jJ1pFsxhUP2sD9KTw5Oz4&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=eh.vk.com&sid=f69d7af2d5fc5e0c#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA28%7C%20%40WhiteListVless
+vless://7bc30425-1c2f-4823-b629-90f599a4cbfe@5.188.140.18:1488?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=ads.x5.ru#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA29%7C%20%40WhiteListVless
+vless://7bc30425-1c2f-4823-b629-90f599a4cbfe@109.120.188.166:443?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=ads.x5.ru&sid=6ba85179e30d4fc2#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA30%7C%20%40WhiteListVless
+vless://b42f7955-3741-406f-b95a-ed7b051ae5aa@109.120.191.92:1488?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=ads.x5.ru#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA31%7C%20%40WhiteListVless
+vless://1daf1a3a-8087-4e44-bde2-d374d0cf69e4@46.243.232.142:443?security=reality&encryption=none&pbk=Z6d_bbLY2IarsuQ5BDmRSleuL0uLDApRHjXaJkR2LkU&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-22.userapi.com&sid=278efd4cc196c984#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA32%7C%20%40WhiteListVless
+vless://d6b1327d-2bec-4366-a3a1-9b1284f95841@109.120.190.203:1488?security=reality&encryption=none&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=ads.x5.ru#%E2%84%96%F0%9F%87%B7%F0%9F%87%BA33%7C%20%40WhiteListVless
+</div>
+
+</body>
+</html>
